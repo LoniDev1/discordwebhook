@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Webhook Nachricht senden</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h4 class="hyperlink-instructions">Um einen Hyperlink zu senden, geben Sie [Name des Links](Ziel-URL) ein.</h4>
+        <h1>Discord Webhook Nachricht senden</h1>
+        
+        <label for="webhookUrl">Discord Webhook URL:</label>
+        <input type="text" id="webhookUrl" placeholder="Geben Sie hier die Webhook-URL ein">
+        <div id="webhookValidation"></div><br>
+        
+        <label for="message">Nachricht:</label>
+        <textarea id="message" rows="4" cols="50" placeholder="Geben Sie hier Ihre Nachricht ein"></textarea><br>
+
+        <h2>Embed Optionen:</h2>
+        <label for="embedTitle">Embed Titel:</label>
+        <input type="text" id="embedTitle" placeholder="Geben Sie den Embed Titel ein"><br>
+        
+        <label for="embedDescription">Embed Beschreibung:</label>
+        <textarea id="embedDescription" rows="4" cols="50" placeholder="Geben Sie die Embed Beschreibung ein"></textarea><br>
+        
+        <label for="embedColor">Embed Farbe (Hex):</label>
+        <input type="text" id="embedColor" placeholder="z.B. #00FF00"><br>
+        
+        <button id="sendButton" disabled>Senden</button>
+    </div>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle" class="toggle-label">Dark Mode</label>
+    </div>
+    
+    <!-- Platzhalter für Discord Widgets -->
+    <div class="discord-widgets-placeholder"></div>
+    <div class="discord-widgets">
+        <iframe src="https://discord.com/widget?id=1081298508465832047&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <iframe src="https://discord.com/widget?id=825058116068048916&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+
+
+    <div class="footer" id="footer">
+        <ul>
+            <li>
+                <a href="#">Impressum</a>
+            </li>
+            <li>
+                <!-- Link zu Ihrem GitHub-Profil -->
+                <a href="https://github.com/IhrGitHubBenutzername">
+                    <!-- GitHub-Logo aus dem Internet -->
+                    <img src="https://github.com/github.png" alt="GitHub" class="github-logo">
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a href="#">Datenschutz</a>
+            </li>
+            <li>
+                <a href="#">Kontakt</a>
+            </li>
+            <!-- Fügen Sie hier weitere Links hinzu, falls benötigt -->
+        </ul>
+    </div>
+
+    
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

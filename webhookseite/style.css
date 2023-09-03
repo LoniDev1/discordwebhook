@@ -1,0 +1,192 @@
+body {
+    background-color: #f6f8fa; /* Standard-Hintergrundfarbe */
+    transition: background-color 1s ease; /* Übergangseffekt für den Hintergrund */
+    position: relative; /* Stellen Sie sicher, dass die iFrames relativ zur Seite positioniert sind */
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #2e8b57; /* Leicht grüne Farbe beim Überfahren */
+    transform: scale(1.1); /* Vergrößern des Buttons beim Überfahren */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Hinzufügen von Schatten */
+}
+
+/* Button deaktiviert (grau) */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hyperlink-instructions {
+    font-size: 14px;
+    color: #777;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Stil für den Dark-Mode-Schalter */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.toggle-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Stil für den Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode-toggle label {
+    color: white;
+}
+
+/* Stil für den Light Mode */
+body.light-mode {
+    background-color: white;
+    color: #333;
+}
+
+.dark-mode-toggle label {
+    color: #333;
+}
+
+#webhookValidation {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* CSS für die Einfliegeanimation und das Erscheinungsbild */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+    opacity: 0;
+    pointer-events: none; /* Klicken durch das Overlay hindurch ermöglichen */
+    transition: opacity 1s ease; /* Übergangseffekt für den Hintergrund */
+    z-index: 9998; /* Hintergrund unter dem iframe-container */
+}
+
+.iframe-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -100%; /* Startposition außerhalb des Bildschirms unten */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease, bottom 1s ease;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Einfliegeanimation für die Discord-Widgets */
+.discord-widgets {
+    transform: translateY(100%); /* Startposition unterhalb des Bildschirms */
+    transition: transform 1s ease;
+}
+
+
+
+/* Wenn die Discord-Widgets sichtbar werden sollen */
+.discord-widgets.show {
+    transform: translateY(0); /* Einfliegen von unten */
+}
+
+body.dark-background {
+    background-color: #292626; /* Neue Hintergrundfarbe beim Scrollen */
+}
+
+/* Fügen Sie diese CSS-Regeln in Ihre externe CSS-Datei ein (style.css) */
+
+/* Stil für die schwarze Leiste am unteren Rand */
+/* GitHub-Leiste am unteren Rand */
+/* GitHub-Leiste am unteren Rand */
+
+
+/* CSS für die Fußleiste */
+        /* Stil für die Fußleiste */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Stil für den Link-Text im Hover-Zustand */
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Stil für das GitHub-Logo */
+        .github-logo {
+            width: 20px; /* Anpassen der Größe nach Bedarf */
+            vertical-align: middle;
+            margin-right: 5px;
+        }
